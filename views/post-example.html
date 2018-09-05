@@ -1,0 +1,44 @@
+{{<partials-layout}}
+  {{$menu}}
+    <main id="content" class="main" role="main">
+  {{/menu}}
+  {{$content}}
+      <h1 class="heading-large">
+        <span lang="en">POST example</span>
+      </h1>
+      <form action="/tree-hug" method="POST" autocomplete="off" novalidate="true" spellcheck="false">
+
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+        <h1 class="govuk-fieldset__heading">
+          Do you hug trees?
+        </h1>
+      </legend>
+      <div class="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="tree-hugger-1" name="tree-hugger" type="radio" value="yes">
+          <label class="govuk-label govuk-radios__label" for="where-do-you-live-1">
+            Yes
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="tree-hugger-2" name="tree-hugger" type="radio" value="no">
+          <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+            No
+          </label>
+        </div>
+      </div>
+    </fieldset>
+
+
+        <button class="button" id="continue" type="submit">
+          <span lang="en">continue</span>
+        </button>
+
+  </div>
+        
+      </div>
+      </form>
+    </main>
+  {{/content}}
+{{/partials-layout}}
