@@ -1,0 +1,44 @@
+{{<partials-layout}}
+  {{$menu}}
+    <main id="content" class="main" role="main">
+  {{/menu}}
+  {{$content}}
+      <h1 class="heading-large">
+        <span lang="en">Radio buttons</span>
+      </h1>
+      <form action="/england" method="GET" autocomplete="off" novalidate="true" spellcheck="false">
+
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+        <h1 class="govuk-fieldset__heading">
+          Where do you live?
+        </h1>
+      </legend>
+      <div class="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="where-do-you-live-1" name="location" type="radio" value="england">
+          <label class="govuk-label govuk-radios__label" for="where-do-you-live-1">
+            England
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="where-do-you-live-2" name="location" type="radio" value="scotland">
+          <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+            Scotland
+          </label>
+        </div>
+      </div>
+    </fieldset>
+
+
+        <button class="button" id="continue" type="submit">
+          <span lang="en">continue</span>
+        </button>
+
+  </div>
+        
+      </div>
+      </form>
+    </main>
+  {{/content}}
+{{/partials-layout}}

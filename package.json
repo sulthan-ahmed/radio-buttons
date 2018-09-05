@@ -1,0 +1,46 @@
+{
+  "name": "digital-display-spike",
+  "version": "1.0.0",
+  "description": "spike for a digital display",
+  "main": "app.js",
+  "scripts": {
+    "start": "node .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "NODE_ENV=development npm-run-all --parallel watch:app watch:scss copy:images",
+    "watch:app": "nodemon --inspect .",
+    "watch:scss": "nodemon -e scss -x 'npm run sass'",
+    "setup": "mkdir -p ./public/js ./public/css ./public/images",
+    "copy:images": "cp -r ./app/assets/images ./public/",
+    "sass": "npm-sass ./app/assets/sass/app.scss > ./public/css/app.css",
+    "clean": "rm -rf ./public",
+    "postinstall": "npm-run-all clean setup sass copy:images"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UKHomeOffice/digital-display-spike.git"
+  },
+  "engines": {
+    "node": "^6.11.4",
+    "npm": "^5.4.2"
+  },
+  "author": "Sulthan Ahmed",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/UKHomeOffice/digital-display-spike/issues"
+  },
+  "homepage": "https://github.com/UKHomeOffice/digital-display-spike#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "express-partial-templates": "^0.2.0",
+    "hof-frontend-toolkit": "^2.1.1",
+    "hof-govuk-template": "^1.0.0",
+    "hogan-express-strict": "^0.5.4",
+    "npm-sass": "^2.2.3",
+    "save": "^2.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.5",
+    "npm-run-all": "^4.1.3"
+  }
+}
